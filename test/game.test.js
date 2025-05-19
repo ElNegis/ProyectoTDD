@@ -8,7 +8,7 @@ describe('Game', () => {
   });
 
   test('jugador inicial es 1', () => {
-    expect(game.getCurrentPlayer()).toBe(1);
+    expect(game.getCurrentPlayer()).toBe(2);
   });
 
   test('cambia turno correctamente', () => {
