@@ -3,8 +3,20 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - '**.js'
+      - 'package.json'
+      - 'jest.config.js'
+      - '.babelrc'
+      - '.github/workflows/maven.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - '**.js'
+      - 'package.json'
+      - 'jest.config.js'
+      - '.babelrc'
+      - '.github/workflows/maven.yml'
 
 jobs:
   build:
@@ -23,7 +35,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: List project files
-        run: ls -R .
+        run: |
+          echo "### Listing files"
+          ls -R .
 
       - name: Clean old dependencies (Windows)
         if: runner.os == 'Windows'
