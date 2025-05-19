@@ -17,6 +17,7 @@ export class UI {
       const player = this.game.getCurrentPlayer();
       cell.textContent = player === 1 ? 'X' : 'O';
       cell.classList.add(`player${player}`);
+      this.game.nextTurn();
     } catch (e) {
       console.warn(e.message);
     }
