@@ -46,7 +46,6 @@ jobs:
         shell: pwsh
         run: |
           del package-lock.json
-          rd node_modules
 
       - name: Install dependencies
         run: npm install
