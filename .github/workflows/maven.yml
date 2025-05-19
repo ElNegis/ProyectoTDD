@@ -53,8 +53,5 @@ jobs:
       - name: grant permisos
         run: chmod +x ./node_modules/.bin/jest
 
-      - name: prueba
-        run: npm test
-
       - name: Run tests
         run: npm test
