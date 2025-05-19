@@ -6,6 +6,18 @@
     "test": "jest",
     "start": ""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElNegis/ProyectoTDD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElNegis/ProyectoTDD/issues"
+  },
+  "homepage": "https://github.com/ElNegis/ProyectoTDD#readme",
+  "description": "",
   "devDependencies": {
     "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.27.2",
