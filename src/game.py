@@ -73,17 +73,20 @@ class Game:
         print("¡Bienvenido al juego de 3 en raya!")
         print(f"{self.player1.name} juega con 'X'")
         print(f"{self.player2.name} juega con 'O'")
-        
+        status = None
         while not self.game_over:
             self.board.display()
-            
             if self.play_turn():
                 status = self.check_game_status()
                 if status:
                     self.board.display()
                     print(status)
+                    self.game_over = True  # Asegura que game_over sea True incluso si check_game_status está mockeado
                     break
                 self.switch_player()
+        # Si el bucle termina por otra razón y status no es None, asegura game_over
+        if status:
+            self.game_over = True
     
     def reset_game(self):
         """Reinicia el juego a su estado inicial."""
