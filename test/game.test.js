@@ -28,7 +28,7 @@ describe('Game', () => {
     const b = game.board;
     b.placePiece(0, 2, 2);
     b.placePiece(1, 2, 2);
-    b.placePiece(2, 2, 1);
+    b.placePiece(2, 2, 2);
     expect(game.isWinner(2)).toBe(true);
   });
 
