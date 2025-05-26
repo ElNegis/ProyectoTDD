@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "start": ""
+    "start": "node init && "
   },
   "repository": {
     "type": "git",
