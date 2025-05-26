@@ -5,22 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3 en Raya</title>
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1 class="title">
-  <span>✨</span> 3 en Raya <span>🎉</span>
-</h1>
-
-  <div id="board">
-    <div class="cell" data-row="0" data-col="0"></div>
-    <div class="cell" data-row="0" data-col="1"></div>
-    <div class="cell" data-row="0" data-col="2"></div>
-    <div class="cell" data-row="1" data-col="0"></div>
-    <div class="cell" data-row="1" data-col="1"></div>
-    <div class="cell" data-row="1" data-col="2"></div>
-    <div class="cell" data-row="2" data-col="0"></div>
-    <div class="cell" data-row="2" data-col="1"></div>
-    <div class="cell" data-row="2" data-col="2"></div>
+  <div class="container">
+    <h1 class="title">
+      <span>✨</span> 3 en Raya <span>🎉</span>
+    </h1>
+    <div class="scoreboard">
+      <div class="score player1-score">Jugador X: <span id="score-x">0</span></div>
+      <div class="score player2-score">Jugador O: <span id="score-o">0</span></div>
+    </div>
+    <div id="board">
+      <div class="cell" data-row="0" data-col="0"></div>
+      <div class="cell" data-row="0" data-col="1"></div>
+      <div class="cell" data-row="0" data-col="2"></div>
+      <div class="cell" data-row="1" data-col="0"></div>
+      <div class="cell" data-row="1" data-col="1"></div>
+      <div class="cell" data-row="1" data-col="2"></div>
+      <div class="cell" data-row="2" data-col="0"></div>
+      <div class="cell" data-row="2" data-col="1"></div>
+      <div class="cell" data-row="2" data-col="2"></div>
+    </div>
+    <div class="controls">
+      <button id="reset-btn">Reiniciar Juego</button>
+    </div>
+    <div id="message" class="message"></div>
   </div>
   <script type="module">
     import { Board } from './js/board.js';
@@ -32,6 +44,7 @@
     const game = new Game(board);
     const ui = new UI(boardEl, board, game);
     ui.init();
+    document.getElementById('reset-btn').addEventListener('click', () => ui.resetGame && ui.resetGame());
   </script>
 </body>
 </html>
