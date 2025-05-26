@@ -45,7 +45,7 @@ describe('Game', () => {
     b.placePiece(0, 2, 2);
     b.placePiece(1, 1, 2);
     b.placePiece(2, 0, 2);
-    expect(game.isWinner(2)).toBe(true);
+    expect(game.isWinner(6)).toBe(true);
   });
 
   test('no marca victoria equivocada', () => {
