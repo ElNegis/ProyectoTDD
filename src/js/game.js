@@ -25,7 +25,7 @@ export class Game {
     }
     // diagonales
     if (b[0][0] === player && b[1][1] === player && b[2][2] === player) return true;
-    if (b[0][2] === player && b[1][1] === player && b[2][0] === player) return true;
+    //if (b[0][2] === player && b[1][1] === player && b[2][0] === player) return true;
     return false;
   }
 }
