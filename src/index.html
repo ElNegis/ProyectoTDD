@@ -7,17 +7,22 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <h1>3 en Raya</h1>
-  <div id="board">
-    <div class="cell" data-row="0" data-col="0"></div>
-    <div class="cell" data-row="0" data-col="1"></div>
-    <div class="cell" data-row="0" data-col="2"></div>
-    <div class="cell" data-row="1" data-col="0"></div>
-    <div class="cell" data-row="1" data-col="1"></div>
-    <div class="cell" data-row="1" data-col="2"></div>
-    <div class="cell" data-row="2" data-col="0"></div>
-    <div class="cell" data-row="2" data-col="1"></div>
-    <div class="cell" data-row="2" data-col="2"></div>
+  <div class="container">
+    <h1>3 en Raya</h1>
+    <p class="subtitle">¡Juega y diviértete!</p>
+    <div id="status"></div>
+    <div id="board">
+      <div class="cell" data-row="0" data-col="0"></div>
+      <div class="cell" data-row="0" data-col="1"></div>
+      <div class="cell" data-row="0" data-col="2"></div>
+      <div class="cell" data-row="1" data-col="0"></div>
+      <div class="cell" data-row="1" data-col="1"></div>
+      <div class="cell" data-row="1" data-col="2"></div>
+      <div class="cell" data-row="2" data-col="0"></div>
+      <div class="cell" data-row="2" data-col="1"></div>
+      <div class="cell" data-row="2" data-col="2"></div>
+    </div>
+    <button id="restart">Reiniciar</button>
   </div>
   <script type="module">
     import { Board } from './js/board.js';
