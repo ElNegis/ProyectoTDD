@@ -85,3 +85,17 @@ h1 {
   background: linear-gradient(90deg, #1565c0 0%, #42a5f5 100%);
   transform: scale(1.05);
 }
+.cell.win {
+  animation: win-glow 0.7s alternate infinite;
+  background: #fffde7 !important;
+  border-color: #ffd600 !important;
+  box-shadow: 0 0 16px #ffd600, 0 0 32px #fffde7;
+}
+@keyframes win-glow {
+  from {
+    box-shadow: 0 0 8px #ffd600, 0 0 16px #fffde7;
+  }
+  to {
+    box-shadow: 0 0 24px #ffd600, 0 0 48px #fffde7;
+  }
+}
